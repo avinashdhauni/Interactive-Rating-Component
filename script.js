@@ -8,8 +8,7 @@ const otherRatings = document.querySelector(".rating");
 var selectedRating = "no rating";
 
 rating.forEach((e) => {
-    e.classList.add("active");
-    console.log(e);
+
     e.addEventListener("click", (event) => {
         selectedRating = event.target.innerHTML;
         if(e.classList.contains("active")){
