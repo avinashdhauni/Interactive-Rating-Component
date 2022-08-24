@@ -10,11 +10,16 @@ var selectedRating = "no rating";
 rating.forEach((e) => {
 
     e.addEventListener("click", (event) => {
-        selectedRating = event.target.innerHTML;
-        if(e.classList.contains("active")){
+        selectedRating = event.target.textContent;
+
+        rating.forEach((e) =>{
+          if(e.classList.contains("active")){
             e.classList.remove("active");
-        }else{
-            e.classList.add("active");
+          }
+        })
+
+       if(e.textContent === selectedRating) {
+          e.classList.add("active")
         }
     })
 })
